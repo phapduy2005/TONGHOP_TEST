@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Film AI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: #102a43;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #627d98;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 30px;
+            max-width: 900px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Thiết kế chung cho thẻ */
+        .card {
+            flex: 1;
+            min-width: 300px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none; /* Bỏ gạch chân cho link */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 6px solid #ccc;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* Thẻ Beginner (Người mới) */
+        .card-beginner {
+            border-top-color: #10b981; /* Màu xanh lá mượt mà */
+        }
+        
+        .card-beginner .icon {
+            color: #10b981;
+        }
+
+        /* Thẻ Experience (Kinh nghiệm) */
+        .card-experience {
+            border-top-color: #6366f1; /* Màu tím/xanh dương công nghệ */
+        }
+
+        .card-experience .icon {
+            color: #6366f1;
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #102a43;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #486581;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .card-beginner .btn {
+            background: #e6fcf5;
+            color: #10b981;
+        }
+        .card-beginner:hover .btn {
+            background: #10b981;
+            color: #fff;
+        }
+
+        .card-experience .btn {
+            background: #eef2ff;
+            color: #6366f1;
+        }
+        .card-experience:hover .btn {
+            background: #6366f1;
+            color: #fff;
+        }
+
+        /* Responsive: Khi màn hình nhỏ (điện thoại), các thẻ sẽ xếp dọc */
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🎬 Tổ Hợp Film AI</h1>
+        <p>Lựa chọn lộ trình phù hợp với bạn</p>
+    </div>
+
+    <div class="cards-container">
+        
+        <a href="index11.html" class="card card-beginner">
+            <div class="icon">🌱</div>
+            <h2>FILMAI BEGINNER</h2>
+            <p>Lộ trình làm quen với các công cụ tạo ảnh, video và prompt cơ bản dành cho người mới bắt đầu.</p>
+            <span class="btn">Bắt đầu ngay</span>
+        </a>
+
+        <a href="index22.html" class="card card-experience">
+            <div class="icon">🚀</div>
+            <h2>FILMAI EXPERIENCE</h2>
+            <p>Các kỹ thuật chuyên sâu, tinh chỉnh prompt, góc máy, đối thoại và xử lý âm thanh nâng cao.</p>
+            <span class="btn">Khám phá</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
