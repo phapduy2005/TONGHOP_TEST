@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dây Chuyền Làm Phim</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Cấu trúc dây chuyền */
+        .pipeline-wrapper {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        /* Trục dọc nối các bước */
+        .pipeline-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            bottom: 40px;
+            left: 28px; /* Căn giữa trục với hình tròn */
+            width: 4px;
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+
+        .pipeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        /* Nút tròn đánh số */
+        .pipeline-node {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 2;
+            margin-left: 10px;
+            margin-right: 25px;
+            box-shadow: 0 0 0 5px #f0f4f8, 0 3px 6px rgba(0,0,0,0.15);
+            transition: background 0.3s ease;
+        }
+
+        /* Khối nội dung */
+        .pipeline-content {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 5px solid #3b82f6;
+            overflow: hidden;
+        }
+
+        .pipeline-content:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .pipeline-content:hover .pipeline-node {
+            background: #2563eb;
+        }
+
+        /* Link bên trong khối */
+        .pipeline-content a {
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+            display: block;
+            padding: 18px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pipeline-content a:hover {
+            color: #2563eb;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>⚙️ Dây Chuyền Làm Phim</h1>
+        
+        <div class="pipeline-wrapper">
+            
+            <div class="pipeline-item">
+                <div class="pipeline-node">1</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Tạo hình cinematic</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">2</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Chỉnh sửa hình ảnh</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">3</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Tạo góc</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">4</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Đối thoại</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">5</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Multi-shot</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">6</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">JSON prompt</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">7</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Start-end frame</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">8</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Prompt video</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">9</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">App guidance</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">10</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Audio</a>
+                </div>
+            </div>
+
+            <div class="pipeline-item">
+                <div class="pipeline-node">11</div>
+                <div class="pipeline-content">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Editing</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-text">
+            <p>Nhấp vào từng bước để đi tới tài liệu hướng dẫn tương ứng.</p>
+        </div>
+    </div>
+
+</body>
+</html>
